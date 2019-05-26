@@ -1,0 +1,25 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/auto" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{auto._id}}">
+    <div class="form-group">
+        <label>Марка</label>
+        <input type="text" class="form-control" name="brand" placeholder="Марка...." value="{{auto.brand}}">
+    <div class="form-group">
+        <label>Модель</label>
+        <input type="text" class="form-control" name="model" placeholder="Модель...." value="{{auto.model}}">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Пробег</label>
+            <input type="text" class="form-control" name="mileage" placeholder="Пробег...." value="{{auto.mileage}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Год выпуска</label>
+            <input type="text" class="form-control" name="year" placeholder="Год выпуска...." value="{{auto.year}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Отправить</button>
+        <a class="btn btn-secondary" href="/auto/list"><i class="fa fa-list-alt"></i>Показать все</a>
+    </div>
+</form>

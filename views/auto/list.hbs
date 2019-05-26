@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/auto"><i class="fa fa-plus"></i>Добавить</a>   Список автомобилей</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Марка</th>
+            <th>Модель</th>
+            <th>Пробег</th>
+            <th>Год выпуска</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.brand}}</td>
+            <td>{{this.model}}</td>
+            <td>{{this.mileage}}</td>
+            <td>{{this.year}}</td>
+            <td>
+                <a href="/auto/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/auto/delete/{{this._id}}" onclick="return confirm('Вы уверены что хотите удалить ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
